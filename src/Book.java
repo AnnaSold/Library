@@ -1,26 +1,25 @@
 public class Book extends Edition {
-    String name;
-    String author;
-    int numberOfPages;
-    String publishingHouse;
-    int publishingYear;
+    private int numberOfPages;
+    private String publishingHouse;
+
 
     public Book(String name, String author, int numberOfPages, String publishingHouse, int publishingYear) {
-        this.name = name;
-        this.author = author;
+        super(name, author, publishingYear);
         this.numberOfPages = numberOfPages;
         this.publishingHouse = publishingHouse;
-        this.publishingYear = publishingYear;
+
     }
+
 
     @Override
     public String toString() {
         return "Book{" +
-                "name='" + name + '\'' +
-                ", author='" + author + '\'' +
+                "name='" + getName() + '\'' +
+                ", author='" + getAuthor() + '\'' +
                 ", numberOfPages=" + numberOfPages +
                 ", publishingHouse='" + publishingHouse + '\'' +
-                ", publishingYear=" + publishingYear +
+                ", publishingYear=" + getPublishingYear() +
                 '}';
     }
+
 }

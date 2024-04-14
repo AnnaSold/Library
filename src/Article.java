@@ -1,26 +1,24 @@
 public class Article extends Edition {
-    String name;
-    String author;
-    String nameOfMagazine;
-    int numberMagazine;
-    int publishingYear;
+
+    private String nameOfMagazine;
+    private int numberMagazine;
+
 
     public Article(String name, String author, String nameOfMagazine, int numberMagazine, int publishingYear) {
-        this.name = name;
-        this.author = author;
+        super(name, author, publishingYear);
         this.nameOfMagazine = nameOfMagazine;
         this.numberMagazine = numberMagazine;
-        this.publishingYear = publishingYear;
+
     }
 
     @Override
     public String toString() {
         return "Article{" +
-                "name='" + name + '\'' +
-                ", author='" + author + '\'' +
+                "name='" + getName() + '\'' +
+                ", author='" + getAuthor() + '\'' +
                 ", nameOfMagazine='" + nameOfMagazine + '\'' +
                 ", numberMagazine=" + numberMagazine +
-                ", publishingYear=" + publishingYear +
+                ", publishingYear=" + getPublishingYear() +
                 '}';
     }
 }

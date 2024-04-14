@@ -1,20 +1,19 @@
 public class ElBook extends Edition {
-    String name;
-    String author;
-    String url;
 
-    public ElBook(String name, String author, String url) {
-        this.name = name;
-        this.author = author;
+   private String url;
+
+    public ElBook(String name, String author, String url, int publishingYear) {
+        super(name, author, publishingYear);
         this.url = url;
     }
 
     @Override
     public String toString() {
         return "ElBook{" +
-                "name='" + name + '\'' +
-                ", author='" + author + '\'' +
+                "name='" + getName() + '\'' +
+                ", author='" + getAuthor() + '\'' +
                 ", url='" + url + '\'' +
+                "publishing Year" + getPublishingYear() +
                 '}';
     }
 
